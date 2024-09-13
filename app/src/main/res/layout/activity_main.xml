@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:background="#1574F9"
+    android:layout_height="match_parent">
+
+    <TextView
+        android:id="@+id/locationTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Distance hare :"
+        android:textColor="#898989"
+        android:textSize="13sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/locationTextView2" />
+
+    <TextView
+        android:id="@+id/locationTextView2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Find Users"
+        android:textColor="#000000"
+        android:textSize="17sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/scanningAnimation2" />
+
+    <com.airbnb.lottie.LottieAnimationView
+        android:id="@+id/scanningAnimation2"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_marginBottom="60dp"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="@+id/scanningAnimation"
+        app:layout_constraintEnd_toEndOf="@+id/scanningAnimation"
+        app:layout_constraintStart_toStartOf="@+id/scanningAnimation"
+        app:layout_constraintTop_toTopOf="@+id/scanningAnimation"
+        app:lottie_autoPlay="false"
+        app:lottie_colorFilter="@color/color"
+        app:lottie_loop="true"
+        app:lottie_rawRes="@raw/scane1" />
+
+    <com.airbnb.lottie.LottieAnimationView
+        android:id="@+id/scanningAnimation"
+        android:layout_width="350dp"
+        android:layout_height="350dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:lottie_autoPlay="false"
+        app:lottie_colorFilter="@color/black"
+        app:lottie_loop="true"
+        app:lottie_rawRes="@raw/scaning" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/usersRecyclerView"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_margin="10dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView"
+        tools:listitem="@layout/item_user" />
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:text="Scaned Device :"
+        android:textSize="18dp"
+        app:layout_constraintStart_toStartOf="@+id/findButton"
+        app:layout_constraintTop_toBottomOf="@+id/findButton" />
+
+    <Button
+        android:id="@+id/connectButton"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="Connect"
+        android:layout_marginRight="20dp"
+        android:layout_marginLeft="10dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/findButton"
+        app:layout_constraintTop_toBottomOf="@+id/scanningAnimation" />
+
+    <Button
+        android:id="@+id/findButton"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="Find"
+        android:layout_marginLeft="20dp"
+        android:backgroundTint="#DD4E00"
+        android:layout_marginRight="10dp"
+        app:layout_constraintEnd_toStartOf="@+id/connectButton"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/scanningAnimation" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

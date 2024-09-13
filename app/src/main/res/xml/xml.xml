@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<tabs>
+    <tab
+        drawable="@drawable/homeicone"
+        text="Home" />
+
+    <tab
+        drawable="@drawable/r3"
+        text="reward" />
+
+    <tab
+        drawable="@drawable/p1"
+        text="profile" />
+
+</tabs>
